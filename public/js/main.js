@@ -14,9 +14,11 @@ var makeMove = function(algo, skill=3) {
     var move = calcBestMoveNoAB(skill, game, game.turn())[1];
   } else if (algo == 4) {
    var move = calcBestMove(skill, game, game.turn())[1];
-  } else {
-    var move = calcBestMove(skill, game, game.turn())[1];
-  } 
+  } else if (algo == 5) {
+    var move = calcBestMove_2(skill, game, game.turn())[1];
+  } else
+    var move = calcBestMove_2(skill, game, game.turn())[1];
+}
 
   // Make the calculated move
   game.move(move);
