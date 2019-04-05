@@ -433,7 +433,7 @@ board evaluation function that takes into account the position of
 each piece on the board.
 */
 
-var calcBestMove = function(depth, game, playerColor,
+var calcBestMove_2 = function(depth, game, playerColor,
                             alpha=Number.NEGATIVE_INFINITY,
                             beta=Number.POSITIVE_INFINITY,
                             isMaximizingPlayer=true) {
