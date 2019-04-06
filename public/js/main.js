@@ -60,3 +60,23 @@ var onDrop = function(source, target) {
     makeMove(4, 3);
   }, 250);
 };
+
+
+// function to run multiple iterations of the game. It randomly selects the evaluation (algorithm) to use and the depth for both players. 
+var test = function(){
+    
+    for (var i = 0; i < 100 ; i++){
+      var algorithm = Math.floor((Math.random()*3) + 3); // random number between 3 and 5 for algorithm 
+      var skillW = Math.floor((Math.random()*3) + 1); // random number between 1 and 3 for depth of W
+      var skillB = Math.floor((Math.random()*3) + 1); // random number between 1 amd 3 for depth B 
+      game.reset(); // reset chess game 
+      board.clear(); // clear board 
+      board.start();
+      playGame(algorithm, skillW , skillB); // play game 
+
+      console.log('Algorithm' + algorithm);
+      console.log('SkillW' + skillW);
+      console.log('SkillB' + skillB);
+    }
+   
+};
